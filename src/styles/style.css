@@ -544,8 +544,7 @@ a {
     }
 
     .description-prompt {
-        margin-top: 10px;
-        margin-bottom: 5px;
+        margin-top: 19px;
         letter-spacing: 0.01px;
     }
 
@@ -556,6 +555,11 @@ a {
 
     .fragrance-gallery {
         max-width: 663px;
+        gap: 16px;
+    }
+
+    .fragrance-card {
+        border-radius: 12px;
     }
 
     .fragrance-name {
@@ -564,6 +568,7 @@ a {
     }
 
     .fragrance-explore-btn {
+        top: 8px;
         width: 114px;
         height: 34px;
     }
