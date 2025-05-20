@@ -267,7 +267,7 @@ a {
 .main-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 78px;
+    margin-top: 85px;
     padding: 0 80px 0 110px;
     text-align: left;
     width: 100%;
@@ -281,9 +281,9 @@ a {
 }
 
 .description-text {
-    line-height: 180%;
     font-weight: 500;
-    letter-spacing: 1.3px;
+    line-height: 160%;
+    letter-spacing: 0.025em;
 }
 
 .description-prompt {
@@ -291,7 +291,7 @@ a {
     font-size: 25px;
     font-weight: 400;
     line-height: 150%;
-    margin: 20px 0 0;
+    margin: 20px 0 5px;
 }
 
 .latest-additions-button {
@@ -315,7 +315,7 @@ a {
     gap: 20px;
     height: fit-content;
     justify-content: space-between;
-    max-width: 795px;
+    max-width: 818px;
 }
 
 .fragrance-card {
