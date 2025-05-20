@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Raees Vert",
+      "image": "fragrance_1.png"
+    },
+    {
+      "id": 2,
+      "name": "Raees Vert",
+      "image": "fragrance_2.png"
+    },
+    {
+      "id": 3,
+      "name": "Raees Vert",
+      "image": "fragrance_3.png"
+    }
+  ]
+}
