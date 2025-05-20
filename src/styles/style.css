@@ -1,0 +1,677 @@
+@import 'fonts.css';
+
+/* Reset default styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--font-gilroy);
+    font-size: clamp(12px, calc(14 / 1440 * 100vw), 16px);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    line-height: 1.6;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+ul, ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 20px;
+    min-width: 1345px;
+}
+
+.newsletter-heading {
+    align-items: center;
+    background-color: #1D1D1B;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    height: 49px;
+    justify-content: center;
+    letter-spacing: 0.01em;
+}
+
+.header {
+    display: grid;
+    gap: 0 21px;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 52px 58px;
+    max-height: 113px;
+    margin-bottom: 17px;
+    padding: 0 calc((80 / 1440) * 100%);
+}
+
+.region-control {
+    align-items: center;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #7B7B7B, #E1E1E1) 1;
+    display: flex;
+    grid-area: 1 / 1;
+    width: 100%;
+    cursor: pointer;
+}
+
+.region-text {
+    color: #7B7B7B;
+    padding-left: 30px;
+}
+
+.header-navigation,
+.burger {
+    grid-area: 2 / 1;
+}
+
+.burger {
+    display: none;
+    margin-top: 18.4px;
+}
+
+.logo {
+    grid-area: 1 / 2 / span 2 / 3;
+    place-self: start center;
+}
+
+.logo-img {
+    margin-top: 11px;
+}
+
+.social-section {
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to left, #7B7B7B, #E1E1E1) 1;
+    color: #7B7B7B;
+    display: flex;
+    grid-area: 1 / 3;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.social-container {
+    display: flex;
+    max-width: 236px;
+    margin-right: 30px;
+}
+
+.social-link-separator {
+    margin: 0 10px;
+}
+
+.social-link-container {
+    align-items: center;
+    display: flex;
+}
+
+.social-link-container li:not(:nth-last-child(-n+1)) {
+    margin-right: 15px;
+}
+
+.social-icon-link img {
+    filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(88%) contrast(87%);
+    transition: filter 0.3s ease;
+}
+
+.social-icon-link:hover img {
+    filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(0deg) saturate(0%) contrast(100%) brightness(45%);
+}
+
+
+.right-block {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-area: 2 / 3;
+    grid-auto-flow: column;
+    padding-right: 30px;
+}
+
+.header-icons,
+.search-form,
+.navigation-list {
+    display: flex;
+}
+
+.navigation-list {
+    color: #252525;
+    display: flex;
+    gap: 26px;
+    justify-content: center;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+.search-form {
+    align-items: center;
+    border-bottom: 1px solid #7B7B7B;
+    display: flex;
+    margin-left: 21px;
+    max-width: 299px;
+    width: calc((514 / 299) *100%);
+    padding-bottom: 7px;
+}
+
+.search-icon {
+    height: 16px;
+    margin-right: 7px;
+    width: 16px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: #7B7B7B;
+    outline: none;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #7B7B7B;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 102px;
+    cursor: pointer;
+}
+
+.main {
+    background-image: url('../assets/images/backgrounds/bg_desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1440px 766px;
+    color: #F6F6F6;
+    max-height: 766px;
+    height: 766px;
+    min-height: calc(100vh - 160px);
+    text-align: center;
+}
+
+.main-subtitle {
+    font-family: var(--font-allura);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 150%;
+    padding-top: 70px;
+}
+
+.main-title {
+    font-family: var(--font-calypso);
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 78px;
+    padding: 0 80px 0 110px;
+    text-align: left;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 300px;
+}
+
+.description-text {
+    line-height: 180%;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+}
+
+.description-prompt {
+    font-family: var(--font-allura);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 20px 0 0;
+}
+
+.latest-additions-button {
+    border-radius: 30px;
+    border: 1px solid #E1E1E1;
+    font-size: 15px;
+    height: 38px;
+    width: 168px;
+    color: #F0F0F0;
+    transition: all 0.5s ease;
+}
+
+.latest-additions-button:hover {
+    background-color: #fff;
+    color: #1D1D1B;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+}
+
+.fragrance-gallery {
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    justify-content: space-between;
+    max-width: 795px;
+}
+
+.fragrance-card {
+    border-radius: 15.4px;
+    display: inline-block;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+}
+
+.fragrance-img {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.fragrance-explore-btn,
+.fragrance-name {
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.fragrance-name {
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    bottom: 10px;
+    display: flex;
+    height: 37px;
+    justify-content: center;
+    left: 10px;
+    width: 118px;
+}
+
+.fragrance-explore-btn {
+    background-color: #fff;
+    border-radius: 30px;
+    color: #1D1D1B;
+    font-size: 15px;
+    height: 34px;
+    right: 10px;
+    top: 10px;
+    width: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: all 0.3s ease;
+}
+
+.explore-plus {
+    display: none;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.explore-plus::before,
+.explore-plus::after {
+    content: '';
+    position: absolute;
+    background-color: #1D1D1B;
+    transition: all 0.3s ease;
+}
+
+.explore-plus::before {
+    width: 15px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.explore-plus::after {
+    width: 1px;
+    height: 15px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.fragrance-explore-btn:hover {
+    width: 152px;
+}
+
+.fragrance-explore-btn:hover .explore-plus {
+    display: block;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0;
+        min-width: 768px;
+    }
+
+    .header {
+        position: relative;
+        padding: 0;
+        grid-template-rows: 45px 53px;
+        border-bottom: 1px solid #7B7B7B;
+        max-width: 668px;
+        margin: 0 50px 9px;
+    }
+
+    .header-icons {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: fit-content;
+        gap: 16px;
+    }
+
+    .social-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-container {
+        max-width: 245px;
+        margin-right: 0;
+    }
+
+    .social-link-container {
+        display: flex;
+        align-items: center;
+        height: 25px;
+    }
+
+    .social-link-separator {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        display: block;
+        font-size: 0;
+        height: 25px;
+        width: 25px;
+        color: #7B7B7B;
+        transition: color 0.3s ease;
+    }
+
+    .icon-heart {
+        position: absolute;
+        left: 40px;
+    }
+
+    .newsletter-heading {
+        height: 44px;
+        text-align: center;
+    }
+
+    .navigation-item {
+        display: none;
+    }
+
+    .burger {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .region-text {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+
+    .boutiques-item {
+        text-align: start;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .main {
+        min-height: 864px;
+        padding: 0 53px 0 52px;
+        background-image: url('../assets/images/backgrounds/bg_tablet.png');
+        background-position: center top;
+        background-size: 768px 825px;
+        background-color: #000;
+        background-repeat: no-repeat;
+    }
+
+    .main-subtitle{
+        padding-top: 60px;
+        line-height: 150%;
+    }
+
+    .main-title {
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .description {
+        max-width: 512px;
+        width: 80%;
+        margin-left: 75px;
+    }
+
+    .description-text {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .description-prompt {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        letter-spacing: 0.01px;
+    }
+
+    .right-block {
+        padding-right: 0;
+        justify-content: flex-end;
+    }
+
+    .fragrance-gallery {
+        max-width: 663px;
+    }
+
+    .fragrance-name {
+        width: 105px;
+        height: 34px;
+    }
+
+    .fragrance-explore-btn {
+        width: 114px;
+        height: 34px;
+    }
+
+    .latest-additions-button {
+        width: 178px;
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        width: 100vw;
+        min-width: 360px;
+    }
+
+    .newsletter-heading {
+        width: 100%;
+    }
+
+    .main {
+        padding: 0 20px;
+        background-image: url('../assets/images/backgrounds/bg_mobile.png');
+        background-position: center;
+        background-size: cover;
+        min-height: 863px;
+        min-width: 360px;
+    }
+
+    .main-content {
+        overflow: hidden;
+        width: 360px;
+        max-width: 340px;
+    }
+
+    .main-subtitle {
+        padding-top: 40px;
+    }
+
+    .region-control,
+    .social-section {
+        display: none;
+    }
+
+    .header {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 72px;
+        height: 72px;
+        border-bottom: 1px solid #7B7B7B;
+        width: 320px;
+        margin: 0 20px 14px;
+        align-items: center;
+    }
+
+    .burger {
+        grid-area: 1 / 1;
+        margin: 0 0 0 5px;
+    }
+
+    .logo {
+        grid-area: 1 / 2;
+    }
+
+    .logo-img {
+        height: 62px;
+        margin-top: 0;
+    }
+
+    .right-block {
+        grid-area: 1 / 3;
+    }
+
+    .icon-heart {
+        left: 40px;
+    }
+
+    .newsletter-heading {
+        height: 60px;
+        text-align: center;
+        padding: 0 22px;
+    }
+
+    .description {
+        margin: 0;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .description-text {
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.2px;
+    }
+
+    .description-prompt {
+        margin-top: 20px;
+        margin-bottom: 0;
+        letter-spacing: 0.06px;
+    }
+
+    .fragrance-gallery {
+        display: flex;
+        height: fit-content;
+        max-width: 818px;
+        width: 818px;
+    }
+
+    .fragrance-name {
+        width: 118px;
+        height: 37px;
+    }
+
+    .fragrance-explore-btn {
+        width: 128px;
+        height: 34px;
+    }
+}
