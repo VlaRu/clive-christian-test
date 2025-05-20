@@ -1,0 +1,21 @@
+:root {
+    --font-allura: 'Allura', sans-serif;
+    --font-calypso: 'Calypso', sans-serif;
+    --font-gilroy: 'Gilroy', sans-serif;
+}
+
+@font-face {
+    font-family: 'Calypso';
+    src: url('../assets/fonts/calypso.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
