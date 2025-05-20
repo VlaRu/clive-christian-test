@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+    margin: 0 auto;
 }
 
 ul, ol, li {
@@ -70,10 +71,10 @@ a {
 }
 
 .container {
-    margin: 0 auto;
     max-width: 1440px;
-    padding: 0 20px;
-    min-width: 1345px;
+    width: 1440px;
+    margin: 0 auto;
+    min-width: 1440px;
 }
 
 .newsletter-heading {
@@ -410,6 +411,7 @@ a {
     .container {
         padding: 0;
         min-width: 768px;
+        width: 100vw;
     }
 
     .header {
