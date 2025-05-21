@@ -151,6 +151,7 @@ a {
 }
 
 .boutiques-item {
+    text-align: start;
     letter-spacing: 0.01em;
 }
 
@@ -202,6 +203,10 @@ a {
     cursor: pointer;
 }
 
+.navigation-item {
+    letter-spacing: 0.03em;
+}
+
 .search-form {
     align-items: center;
     border-bottom: 1px solid #7B7B7B;
@@ -212,9 +217,9 @@ a {
 }
 
 .search-icon {
-    height: 16px;
+    height: 18px;
     margin-right: 7px;
-    width: 16px;
+    width: 18px;
 }
 
 .search-input {
@@ -375,8 +380,8 @@ a {
 
 .explore-plus {
     display: none;
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     position: relative;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -391,16 +396,16 @@ a {
 }
 
 .explore-plus::before {
-    width: 15px;
-    height: 1px;
+    width: 11px;
+    height: 0.5px;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
 .explore-plus::after {
-    width: 1px;
-    height: 15px;
+    width: 0.5px;
+    height: 11px;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
@@ -436,6 +441,11 @@ a {
         flex-direction: row-reverse;
         width: fit-content;
         gap: 20px;
+    }
+
+    .icon-heart {
+        width: 24px;
+        height: 22px;
     }
 
     .social-section {
@@ -502,7 +512,6 @@ a {
     }
 
     .boutiques-item {
-        text-align: start;
         font-size: 14px;
         cursor: pointer;
     }
@@ -630,7 +639,7 @@ a {
         height: 72px;
         border-bottom: 1px solid #7B7B7B;
         width: 320px;
-        margin: 0 20px 14px;
+        margin: 0 20px 15px;
         align-items: center;
     }
 
@@ -666,7 +675,7 @@ a {
     .description-text {
         font-size: 14px;
         line-height: 160%;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.015em;
     }
 
     .description-prompt {
@@ -695,6 +704,8 @@ a {
         height: 34px;
         top: 10px;
         font-size: 15px;
+        letter-spacing: 0.04em;
+        line-height: 185%;
     }
 
     .latest-additions-button {
