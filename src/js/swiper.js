@@ -6,7 +6,6 @@ class TouchSwiper {
         this.startX = 0;
         this.currentX = 0;
         this.isDragging = false;
-        this.slideWidth = 0;
         this.slidesCount = this.slides.length;
 
         this.init();
@@ -14,21 +13,7 @@ class TouchSwiper {
 
     init() {
         if (window.innerWidth > 360) return;
-
-        this.slideWidth = this.element.offsetWidth;
-        this.setupStyles();
         this.addEventListeners();
-    }
-
-    setupStyles() {
-        this.element.style.display = 'flex';
-        this.element.style.transition = 'transform 0.3s ease-out';
-        this.element.style.width = `${this.slidesCount * 100}%`;
-
-        this.slides.forEach(slide => {
-            slide.style.flex = `0 0 ${100 / this.slidesCount}%`;
-            slide.style.width = `${100 / this.slidesCount}%`;
-        });
     }
 
     addEventListeners() {
@@ -48,7 +33,8 @@ class TouchSwiper {
 
         this.currentX = e.touches[0].clientX;
         const diff = this.currentX - this.startX;
-        const offset = (diff / this.slideWidth) * 100;
+        const slideWidth = this.element.offsetWidth;
+        const offset = (diff / slideWidth) * 100;
         const newPosition = -this.currentIndex * (100 / this.slidesCount) + offset;
 
         this.element.style.transform = `translateX(${newPosition}%)`;
@@ -58,7 +44,8 @@ class TouchSwiper {
         if (!this.isDragging) return;
 
         const diff = this.currentX - this.startX;
-        const threshold = this.slideWidth * 0.2;
+        const slideWidth = this.element.offsetWidth;
+        const threshold = slideWidth * 0.2;
 
         if (Math.abs(diff) > threshold) {
             if (diff > 0 && this.currentIndex > 0) {
