@@ -3,17 +3,17 @@
     {
       "id": 1,
       "name": "Raees Vert",
-      "image": "fragrance_1.png"
+      "image": "fragrance_1.webp"
     },
     {
       "id": 2,
       "name": "Raees Vert",
-      "image": "fragrance_2.png"
+      "image": "fragrance_2.webp"
     },
     {
       "id": 3,
       "name": "Raees Vert",
-      "image": "fragrance_3.png"
+      "image": "fragrance_3.webp"
     }
   ]
 }
