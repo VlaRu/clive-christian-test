@@ -546,7 +546,7 @@ a {
         padding: 0 6.7% 0;
         background-image: url('../assets/images/backgrounds/bg_tablet.webp');
         background-position: center top;
-        background-size: 100%;
+        background-size: cover;
         background-color: #000;
         background-repeat: no-repeat;
     }
@@ -557,7 +557,7 @@ a {
     }
 
     .main-title {
-        font-size: clamp(15px, 1.5vw, 25px);
+        font-size: clamp(15px, 3.2vw, 25px);
         line-height: 40px;
     }
 
